@@ -6,7 +6,7 @@ public class ArrayListImpl implements List {
 
 //   Arraylist is a dynamic array collection which is implementation of list interface
     public Object[] elements;  // elements of an array
-    private static final int DEFAULT_CAPACITY=10;
+    private static final int DEFAULT_CAPACITY=4;
     public int size; // no of elements in the array
 
     public ArrayListImpl(){
@@ -89,6 +89,8 @@ public class ArrayListImpl implements List {
         listImp.add(1);
         listImp.add(3);
         listImp.add(1,6);
+        listImp.add(6);
+        listImp.add(9);
         for (int i=0;i<listImp.size();i++){
             System.out.println("element: "+listImp.get(i));
         }
