@@ -25,13 +25,14 @@ class DSAProblems {
                 bracesList.add(chars[i]);
                 intialized = true;
             } else {
-                int size = bracesList.size() - 1;
+                int size = (!bracesList.isEmpty())?bracesList.size() - 1:0;
                 if (bracesList.isEmpty() && !intialized)
                     return false;
-                else if (chars[i] == bracketMaps.get(bracesList.get(size))) {
+                else if (!bracesList.isEmpty() && chars[i] == bracketMaps.get(bracesList.get(size))) {
                     bracesList.remove(size);
-
                 }
+                else
+                    return false;
             }
         }
         return bracesList.isEmpty();
@@ -39,7 +40,7 @@ class DSAProblems {
 }
 public class BracketsValidation {
     public static void main(String[] args) {
-        String input = "[{(){}[(){[]}]}]";
+        String input = "([]){";
         System.out.println("is a valid Input : "+DSAProblems.isValidBraces(input));
     }
 }

@@ -43,4 +43,9 @@ public class ArrayListExample {
         names2.forEach(name-> System.out.println("Names :"+name));
 
     }
+
+
 }
+
+
+
